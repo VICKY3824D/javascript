@@ -1,17 +1,10 @@
-const examScore = [80,85,80,90,93,77];
-const isGraduate = examScore.every((score) => score >= 75);
+const examScore = [80,89,70,90,93,77];
 
-const animes = [
-    {
-        title: 'Attack on Titan',
-        rating: 87,
-        year: 2008,
-    },
-    {
-        title: 'Kemesraan',
-        rating: 85,
-        year: 2009,
-    }
-]
+// let total = 0;
+// for (let score of examScore) {
+//     total += score;
+// }
 
-const isAnimeListNew = animes.some((anime) => anime.year > 2010);
+const total = examScore.reduce((total,score) => {
+    return total + score;
+});
