@@ -1,7 +1,4 @@
-function lemparDadu(sisi = 6){
-    return Math.floor(Math.random() * sisi) + 1;
-}
-
-function sapa(msg, name = 'vicky'){//default argument sebaiknya diletakkan di belakang
-    console.log(`${name} ${msg}`);
-}
+const angka = [1,2,3,4,5];
+//Math.max(angka);//NaN (Not a Number)
+const maksimal = Math.max(...angka);
+const minimal = Math.min(...angka);
