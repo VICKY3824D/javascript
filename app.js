@@ -1,4 +1,5 @@
-const angka = [1,2,3,4,5];
-//Math.max(angka);//NaN (Not a Number)
-const maksimal = Math.max(...angka);
-const minimal = Math.min(...angka);
+const angka = [1,2,3,4,5,6,7,8,9];
+const nama = ['Andi','Budi','Cici','Doni','Eko'];
+
+// Gabungan array angka & nama
+const campuran = [...angka,...nama];
