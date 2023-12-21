@@ -1,5 +1,13 @@
-const angka = [1,2,3,4,5,6,7,8,9];
-const nama = ['Andi','Budi','Cici','Doni','Eko'];
+const user = {
+    nama: 'Paijo',
+    alamat: 'Tegalrejo'
+};
 
-// Gabungan array angka & nama
-const campuran = [...angka,...nama];
+const medsos ={
+    email: 'paijo@doe.com',
+    instagram: 'Paijo_londo'
+};
+
+//menggunakan spread operator
+const identitas = {...user,...medsos};
+
