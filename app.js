@@ -1,4 +1,6 @@
-const nama = ['Alex','Bimo','Cici','Delila','Eko'];
+const user = {
+    name: 'Vidky',
+    email: 'pradana23@doe.com'
+}
 
-//unboxing array
-const [gold, silver, bronze,...lainya] = nama;
+const {name, email, phone = '0812381928'} = user;
