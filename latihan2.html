@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+         /*
+        const data = {
+            "nama" : "Vidky Adhi Pradana",
+            alamat : "Surakarta",
+            usia: 19,
+        };
+
+        console.table(data);
+
+        document.writeln(`Nama: ${data["nama"]} `);
+        document.writeln("<br>");
+        document.writeln(`Alamat: ${data.alamat} `);
+        document.writeln("<br>");
+        document.writeln(`Usia: ${data.usia}`);
+
+        const grade = prompt(`Masukkan Huruf besar`);
+
+        switch(grade){
+            case "A":
+                document.writeln(`Selamat nilai Anda sangat baik`);
+                break;
+            case "B":
+                document.writeln(`Selamat nilai Anda baik`);
+                break;
+            case "C":
+                document.writeln(`Nilai anda cukup`);
+                break;
+            default:
+                document.writeln(`GOBLOK!!!`);
+        }
+        */
+        
+        const person = {
+            name : "Andi",
+        };
+
+        if("name" in person){
+            alert(`Hello ${person.name}`);
+        } else {
+            alert(`Hello`);
+        }
+        
+        /*
+        const student = {
+            FirstName : "Vidky",
+            MidNAme : "Adhi",
+            LastName : "Pradana"
+        };
+
+        if("FirstName" in student){
+            alert(`Hello ${student.FirstName}`)
+        } else {
+            alert(`Hellooo`);
+        }
+        */
+
+        const names = [null, "Andi", null];
+        const result = 0 in names;
+        document.writeln(result);
+
+    </script>
+</body>
+</html>
