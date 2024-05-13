@@ -37,7 +37,7 @@
             default:
                 document.writeln(`GOBLOK!!!`);
         }
-        */
+        
         
         const person = {
             name : "Andi",
@@ -49,7 +49,7 @@
             alert(`Hello`);
         }
         
-        /*
+        
         const student = {
             FirstName : "Vidky",
             MidNAme : "Adhi",
@@ -61,11 +61,33 @@
         } else {
             alert(`Hellooo`);
         }
-        */
-
-        const names = [null, "Andi", null];
-        const result = 0 in names;
+        
+        const names = [null, "Andi", null,"Indi", ,"Herman"];
+        const result = 3 in names;
         document.writeln(result);
+        for(const i of names){
+            console.log(i);
+        } */
+
+        const person2 = {
+            addres: {
+                country : "Wakanda", 
+                povince : "Joger"
+                
+            }
+        };
+        
+        const country= person2?.addres?.country;
+        console.log(country);
+
+        const orang = {};
+        const negara = orang?.alamat?.negara;
+        console.log(negara);
+
+        for(const i in person2.addres){
+            console.log(i);
+        }
+
 
     </script>
 </body>

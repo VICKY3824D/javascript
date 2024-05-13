@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+
+        /*
+        function isContains(array, searchValue){
+            for(const element of array){
+                console.info(`Iterasi Elemen ${element}`);
+                if(element === searchValue){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const arr = [1,3,4,12,32,76,57,8,12,10,5];
+        const cari = 12;
+        const found = isContains(arr,cari);
+        document.writeln(found);
+        */
+
+        //Rest Prameter ...data
+        function Total(name, ...data){
+            let sum = 0;
+            for(const tot of data){
+                sum = sum + tot;
+            }
+            document.writeln(`<p>Total belanja ${name} anda sebesar ${sum}</p>`)
+        }
+
+        const Telo = Total("Telo",2000,3500,5000,12000);
+        const Gedhang = Total("Gedhang",2000,1500,5000,9000);
+        
+
+    </script>
+</body>
+</html>
