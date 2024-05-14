@@ -25,18 +25,42 @@
         document.writeln(found);
         */
 
-        //Rest Prameter ...data
+        //Rest Prameter ...data 
+        /*
         function Total(name, ...data){
             let sum = 0;
             for(const tot of data){
                 sum = sum + tot;
             }
             document.writeln(`<p>Total belanja ${name} anda sebesar ${sum}</p>`)
+        } */
+
+        // menghitung total belanja berdasarkan jenis
+        function SubTotal( ...data){
+            let sum1 = 0;
+            for(const tot1 of data){
+                sum1 = sum1 + tot1;
+            }
+            return sum1;
+        } 
+
+        //menghitung Total belanja keseluruhan
+        function TOTAL(...totL){
+            let sum2 = 0;
+            for(const tot2 of totL){
+                sum2 = sum2 + tot2;
+            }
+            return sum2;
         }
 
-        const Telo = Total("Telo",2000,3500,5000,12000);
-        const Gedhang = Total("Gedhang",2000,1500,5000,9000);
-        
+        const Telo = SubTotal(2000,4500,5000,12000);
+        const Gedhang = SubTotal(2000,1500,5000,9000);
+
+        // const rego = [2000,1500,4500,3000,5000,5500,6500,7000,9000];
+       //  const kabeh = Total("woh-wohan ndeso",...rego);
+
+        const bayar = TOTAL(Telo,Gedhang);
+        document.writeln(`Total Belanja anda sebesar: ${bayar}`);
 
     </script>
 </body>
