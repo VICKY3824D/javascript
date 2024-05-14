@@ -60,7 +60,11 @@
        //  const kabeh = Total("woh-wohan ndeso",...rego);
 
         const bayar = TOTAL(Telo,Gedhang);
-        document.writeln(`Total Belanja anda sebesar: ${bayar}`);
+        const uang = 100000;
+        const kembalian = uang - bayar;
+        document.writeln(`<p>Total Belanja anda sebesar : ${bayar}</p>`);
+        document.writeln(`<p>Uang anda sebesar : ${uang}</p>`);
+        document.writeln(`<p>Kembalian     : ${kembalian}</p>`);
 
     </script>
 </body>
