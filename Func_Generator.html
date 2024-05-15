@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+
+        /*
+        function* jeneng(){
+            yield "Vidky";
+            yield "Adhi";
+            yield "Pradana";
+        }
+
+        const nama = jeneng();
+        for(const i of nama){
+            console.log(i);
+        }
+        */
+
+        //Yield function complex
+        function* ganjil(value){
+            for(let i = 1; i <= value ; i++){
+                if(i % 2 === 1){
+                    yield i;
+                }
+            }
+        }
+
+        const GJL = ganjil(20);
+        for (const item of GJL) {
+            document.writeln(`<p>${item}</p>`);
+        }
+
+    </script>
+</body>
+</html>

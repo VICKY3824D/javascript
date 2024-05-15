@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        //Arrow Function
+        const call = (name) => {
+            document.writeln(`<p>Halooo ${name}, Apa Kabar??</p>`);
+        }
+
+        //Arrow Function Sederhana
+        const celuk = (jeneng) => document.writeln(`<p>Halo ${jeneng}</p>`);
+
+        //Arrow Function Return Value
+        const tambah = (x,y) => x + y;
+
+        //Arrow Function Tanpa Kurung Parameter(wajib 1 parameter)
+        const kuadrat = nilai => nilai ** 2;
+
+        call("Vicky Ganteng");
+        celuk("Vicky Ganteng");
+        const nil = 22;
+        const b = 5;
+        document.writeln(`<p> ${nil} ^2 = ${kuadrat(nil)}</p>`);
+        document.writeln(`<p> ${nil} + ${b} = ${tambah(nil,b)}</p>`);
+
+        
+        const arr1 = [2,3,7,6,8];
+        const arr2 = [3,4,6,7,9];
+        let hasil;
+
+        for(let i = 0; i < arr1.length; i++ ){
+            for(let j = 0; j < arr2.length; j++ ){
+                hasil = tambah(arr1[i],arr2[j]);
+                document.writeln(` ${arr1[i]} + ${arr2[j]} = ${hasil}, `);
+            }
+            document.writeln(`<p></p>`);
+        } 
+
+        function giveName(callback){
+            callback("Vidky");
+        }
+
+        //Anonymus Function
+        /*
+        giveMeName(function(name){
+            console.log(`Hello ${name}`);
+        })
+        */
+
+        //Arrow Function
+        giveName(name => document.writeln(`<p>Hello ${name}</p>`));
+
+
+
+    </script>
+</body>
+</html>
