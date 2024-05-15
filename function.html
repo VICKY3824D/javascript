@@ -34,40 +34,32 @@
             }
             document.writeln(`<p>Total belanja ${name} anda sebesar ${sum}</p>`)
         } 
+        
 
-        // menghitung total belanja berdasarkan jenis
-        function SubTotal( ...data){
-            let sum1 = 0;
-            for(const tot1 of data){
-                sum1 = sum1 + tot1;
+        // Closure
+        function createAdder(Value){
+            const owner = "Vidky";
+            function add(param){
+                document.writeln(`<p>${owner}</p>`);
+                return Value + param;
             }
-            return sum1;
-        } 
-
-        //menghitung Total belanja keseluruhan
-        function TOTAL(...totL){
-            let sum2 = 0;
-            for(const tot2 of totL){
-                sum2 = sum2 + tot2;
-            }
-            return sum2;
+            return add;
         }
 
-        const Telo = SubTotal(2000,4500,5000,12000);
-        const Gedhang = SubTotal(2000,1500,5000,9000);
-
-        // const rego = [2000,1500,4500,3000,5000,5500,6500,7000,9000];
-       //  const kabeh = Total("woh-wohan ndeso",...rego);
-
-        const bayar = TOTAL(Telo,Gedhang);
-        const uang = 100000;
-        const kembalian = uang - bayar;
-        document.writeln(`<p>Total Belanja anda sebesar : ${bayar}</p>`);
-        document.writeln(`<p>Uang anda sebesar : ${uang}</p>`);
-        document.writeln(`<p>Kembalian     : ${kembalian}</p>`);
+        //const addTwo = createAdder(10);
+        //document.writeln(addTwo(30)); -> 10 + 30 = 55
+        document.writeln(`<p> ${createAdder(30)(25)} </p>`);
         */
 
-        
+        const person = {
+            name: "Vidky",
+            sayHello: function(name){
+                document.writeln(`Hello ${name}, my name is ${this.name}`);
+            }
+        }
+
+        const stranger = "Alex";
+        person.sayHello(stranger);
 
     </script>
 </body>

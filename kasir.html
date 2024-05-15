@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir</title>
+</head>
+<body>
+    <script>
+
+                // menghitung total belanja berdasarkan jenis
+                function SubTotal( ...data){
+                    let sum1 = 0;
+                    for(const tot1 of data){
+                        sum1 = sum1 + tot1;
+                    }
+                    return sum1;
+                } 
+        
+                //menghitung Total belanja keseluruhan
+                function TOTAL(...totL){
+                    let sum2 = 0;
+                    for(const tot2 of totL){
+                        sum2 = sum2 + tot2;
+                    }
+                    return sum2;
+                }
+        
+                const Telo = SubTotal(2000,4500,5000,12000);
+                const Gedhang = SubTotal(2000,1500,5000,9000);
+        
+                // const rego = [2000,1500,4500,3000,5000,5500,6500,7000,9000];
+               //  const kabeh = Total("woh-wohan ndeso",...rego);
+        
+                const bayar = TOTAL(Telo,Gedhang);
+                const uang = 90000;
+                const kembalian = uang - bayar;
+                document.writeln(`<p>Total Belanja anda sebesar : ${bayar}</p>`);
+                document.writeln(`<p>Uang anda sebesar : ${uang}</p>`);
+                document.writeln(`<p>Kembalian     : ${kembalian}</p>`);
+
+    </script>
+</body>
+</html>

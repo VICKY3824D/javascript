@@ -31,13 +31,13 @@
 
         
         const arr1 = [2,3,7,6,8];
-        const arr2 = [3,4,6,7,9];
+        const arr2 = [5,4,6,7,9];
         let hasil;
 
         for(let i = 0; i < arr1.length; i++ ){
             for(let j = 0; j < arr2.length; j++ ){
                 hasil = tambah(arr1[i],arr2[j]);
-                document.writeln(` ${arr1[i]} + ${arr2[j]} = ${hasil}, `);
+                document.writeln(` ${arr1[i]} + ${arr2[j]} = ${hasil},  `);
             }
             document.writeln(`<p></p>`);
         } 
@@ -53,8 +53,19 @@
         })
         */
 
-        //Arrow Function
+        //Arrow Function anonymus
         giveName(name => document.writeln(`<p>Hello ${name}</p>`));
+
+        //arrow function in object
+        const Hallo = {
+            name: "Vidky",
+            sayHello: (namaa) => {
+                //arrow function in object can't using this
+                document.writeln(`<p>Hello ${namaa}, nama saya ${this.name}</p>`);
+            }
+        }
+
+        Hallo.sayHello("Ahmad");
 
 
 
